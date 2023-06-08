@@ -1,0 +1,74 @@
+*{
+    font-family: 'Yuji Hentaigana Akebono', cursive;
+    font-weight: 200;
+}
+
+.heads{
+    font-family: 'Yuji Hentaigana Akebono', cursive;
+    font-weight: 800;
+}
+
+.heading{
+    text-align: center;
+}
+
+.fbox{
+    position:sticky;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-around;
+}
+
+.dish{
+    color: aliceblue;
+    border-radius: 6%;
+    padding: 0.5rem;
+    background-color: rgba(235, 44, 15, 0.679);
+}
+
+.explaination{
+    padding-left: 2%;
+}
+
+#bazaar{
+    display: flex;
+    gap: 1rem;
+}
+
+.stallHead{
+    padding-left: 10%;
+}
+
+.fries{
+    background-color: rgba(255, 255, 0, 0.356);
+}
+.skull{
+    background-color: whitesmoke;
+}
+
+.noodles{
+    background-color: rgba(103, 12, 12, 0.3);
+}
+
+.burger{
+    background-color: rgba(0, 128, 0, 0.456);
+}
+
+.pav{
+    background-color: rgba(255, 166, 0, 0.574);
+}
+
+.mojito{
+    background-color: rgba(181, 181, 212, 0.481);
+}
+
+.pasta{
+    background-color: pink;
+}
+
+#scoreCard{
+    display: flex;
+    flex-direction: column;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+}
