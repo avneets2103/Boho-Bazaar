@@ -5,14 +5,9 @@ var correctAns = 0;
 
 // Arrays are:
 // points
-// menu1
-// menu2
-// menu3
-// menu4
-// menu5
+// matrix
 
 // fries , skull, noodles, burger, pav, mojito, pasta
-
 function dishNumber(dish) {
   switch (dish) {
     case "fries":
@@ -45,10 +40,14 @@ function displayPoints() {
 
   let costDisplay = document.getElementById("costing");
   costDisplay.innerText = currentCost;
+
+
 }
 
 let weights = [];
 let values = [];
+let cooking = [];
+let rightCook = [];
 
 // stomachPoints list
 let points = [];
@@ -78,6 +77,8 @@ for (let i = 1; i <= 5; i++) {
     let item = value.querySelector(".item" + j); // Use querySelector to target the specific element
     item.innerHTML = randomNum;
     weights.push(randomNum);
+    cooking.push(0);
+    rightCook.push(0);
   }
   matrix.push(menu);
 }
@@ -125,6 +126,7 @@ while (i > 0 && j > 0) {
   }
   i--;
 }
+rightCook =  selectedItems;
 correctAns = dp[n][maxCostLimit];
 //
 
@@ -141,18 +143,29 @@ for (let index = 0; index < arrayOfItems.length; index++) {
     let idsString = stallElement.id;
     let stallNumber = idsString[5];
     // changes
+
+    if(cooking[(stallNumber-1)*7 + dishId]==1){
+      alert("Dish already cooking, cant reorder same thing from same shop");
+      return;
+    }
+
     let newCost = matrix[stallNumber - 1][dishId - 1];
     if (currentCost + newCost <= maxCostLimit) {
       currentCost += newCost;
       stomachPoints += points[dishId - 1];
+      cooking[(stallNumber-1)*7 + dishId]=1;
     } else {
       console.log("Money finsih, go to your parents");
       alert("Not enough money, try again by refreshing");
+      return;
     }
     if(stomachPoints == correctAns){
         window.location.href = "link.html";
     }
 
     displayPoints();
+    element.innerHTML = "<h5>Cooking</h5><img id ='cook' src='/assets/cooking.gif'>";
+    element.classList.add("cookingRed");
+    console.log(rightCook);
   }
 }

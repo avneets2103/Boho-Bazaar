@@ -72,3 +72,40 @@
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
 }
+
+.cookingRed{
+    background-color: rgba(255, 0, 0, 0.693);
+}
+
+.cookingRed>h5{
+    display: inline-block;
+}
+
+#cook{
+    margin-left: 5%;
+    border-radius: 30%;
+    width:2rem;
+}
+
+@media (max-width: 767px) {
+    /* Styles for mobile devices */
+
+    .fbox {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #bazaar{
+        flex-direction: column;
+    }
+  
+    .stalls {
+        margin-left: 21%;
+      width: 100%;
+    }
+  
+    .stallHead {
+      padding-left: 0;
+      text-align: center;
+    }
+  }
