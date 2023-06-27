@@ -164,7 +164,7 @@ for (let index = 0; index < arrayOfItems.length; index++) {
     }
 
     displayPoints();
-    element.innerHTML = "<h5>Cooking</h5><img id ='cook' src='/assets/cooking.gif'>";
+    element.innerHTML = "<h5>Cooking</h5><img id ='cook' src='assets/cooking.gif'>";
     element.classList.add("cookingRed");
     console.log(rightCook);
   }
